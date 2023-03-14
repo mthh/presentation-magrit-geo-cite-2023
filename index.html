@@ -309,13 +309,14 @@
 				
 				- Pour l'utiliser sans internet
 
-				- Pour traiter des données sensibles
+				- Pour traiter des données sensibles en local
 
-				- Bénéficier de meilleures performances
+				- Pour bénéficier de meilleures performances
 
-				- L'installer sur un Raspberry Pi pour enseigner la cartographie à une classe sans accès au Web ?
+				- L'installer sur un *Raspberry Pi* pour enseigner la cartographie à une classe sans accès au Web ?
 
-				<img src="images/Raspberry_Pi_4_Model_B_-_Side.jpg" style="width: 300px;">
+				<img src="images/Raspberry_Pi_4_Model_B_-_Side.jpg" style="width: 300px; float:left;">
+				<img src="images/docker-hub-magrit-multi.png" style="width: 600px; float:right;">
 
 				--
 
@@ -351,6 +352,24 @@
 
 				- **En utilisant le GUI Docker Desktop (option 2)** :
 
+				<img src="images/docker-desktop-ui.png" style="width: 800px"/>
+				--
+
+				<img src="images/docker-desktop-search-magrit.png" style="width: 800px"/>
+
+				<small>*Chercher "Magrit" dans la barre de recherche, sélectionner l'image __magrit/magrit__ et cliquer sur __Pull__*.</small>
+
+				--
+
+				<img src="images/docker-desktop-images.png" style="width: 800px"/>
+
+				<small>*Dans le menu __Images__, cliquer sur le bouton* ▶️ *de l'image __magrit/magrit__*.</small>
+
+				--
+
+				<img src="images/docker-desktop-run-options.png" style="width: 800px"/>
+
+				<small>*Renseigner le port sur lequel l'application doit être exposée (par exemple 9999)*.</small>
 
 				--
 
@@ -360,7 +379,15 @@
 
 				😎 **_Simplement en ouvrant votre navigateur à l'adresse http://localhost:9999/_**
 
-				<br><br>
+				<br>
+
+				<img src="images/screenshot-magrit-local.png" />
+
+				--
+
+				*Il est ensuite possible de stopper ou de redémarrer l'application depuis le menu __Containers__ de Docker Desktop.*
+
+				<img src="images/docker-desktop-containers.png" style="width: 800px"/>
 				</textarea>
 			</section>
 			<section data-markdown>
