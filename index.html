@@ -93,7 +93,7 @@
 
 				- **Différents formats de données en entrée** (CSV, ESRI Shapefile, GeoJSON, GML, etc.)
 
-				- **Personalisation des cartes** (habillage, légende, etc.)
+				- **Personnalisation des cartes** (habillage, légende, etc.)
 
 				- Nombreuses **projections cartographiques** supportées
 
@@ -136,9 +136,9 @@
 
 				**Données** :
 
-				- xxx
+				- Découpage des quartiers de Paris
 
-				- xxx
+				- Données de Population
 
 				</textarea>
 			</section>
@@ -159,7 +159,11 @@
 				<textarea data-template>
 				## Exercice 2
 
-				- **Objectifs** : Faire une carte de l'évolution 1968-2019 de la population de France Métropolitaine
+				<small>
+
+				- **Objectif thématique** : Faire une carte de l'évolution 1968-2019 de la population de France Métropolitaine
+
+				- **Objectifs techniques** :  Réaliser une carte choroplèthe, choisir une méthode de discrétisation et une palette de couleurs adaptée.
 
 				- **Données** :
 
@@ -167,9 +171,14 @@
 
 					- Données de population par département (source: INSEE) - https://www.insee.fr/fr/statistiques/1893204
 
+				
+				</small>
+				
 				--
 
 				### Étapes à suivre
+
+				<small>
 
 				- **Étape 1** : Calculer la variable à représenter à partir du tableur de l'INSEE et exporter la table en CSV
 
@@ -179,6 +188,50 @@
 
 				- **Étape 4** : Faire les bons choix de sémiologie et d'habillage jusqu'à l'obtention d'une carte finalisée
 
+				</small>
+
+				</textarea>
+			</section>
+			<section data-markdown>
+				<textarea data-template>
+				## Exercice 3
+
+				<small>
+
+				- **Objectif thématique** : Analyser la structure de l'emploi dans la région Hauts-de-France en 2014.
+
+				- **Objectifs techniques** : Combiner plusieurs modes de représentation sur une même carte et mettre en œuvre des représentation cartographiques avancées
+
+				- **Données** :
+
+					- Fond de carte des communes de la région Hauts-de-France (source : IGN)
+
+					- Fond de carte des départements de la région Hauts-de-France (source : IGN)
+
+					- Structure de la population active de 25 à 54 ans par commune (source : INSEE)
+
+				*NB : les données ont été mises en forme avec R pour être importées dans Magrit (extrait des communes des Hauts-de-France et calcul des ratios et de la catégorie dominante)*
+
+				</small>
+				--
+
+				<small>
+				
+				### Étapes à suivre
+
+				- **Étape 1** : Importer les données dans Magrit
+
+				- **Étape 2** :
+
+				- **Étape 3** : 
+
+				</small>
+
+				--
+
+				### Exemple de résultat
+
+				<img src="./images/hauts-de-france-pop-emploi.png" style="width: 800px; background-color: white;">
 
 				</textarea>
 			</section>
