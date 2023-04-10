@@ -43,6 +43,15 @@
 		h3, h4, h5 {
 			text-transform: none !important;
 		}
+		.light-small {
+			font-size: 0.75em;
+		}
+		.ta-left {
+			text-align: left;
+		}
+		.ta-right {
+			text-align: right;
+		}
 	</style>
 </head>
 <body>
@@ -80,6 +89,15 @@
 				<h3 style="display: none;">Chaîne de traitement cartographique</h3>
 				<img src="images/magrit-functions2.png" style="width: 650px">
 
+				--
+
+				<h3 style="display: none;">Exemples de cartes</h3>
+				<img src="images/carte-typo-eu.png" style="width: 400px; float: left;">
+
+				<img src="images/carte-co2.png" style="width: 550px; float: right;">
+
+				<img src="images/carte-cinema-pot.png" style="width: 400px; float: left;">
+
 				</textarea>
 			</section>
 
@@ -87,7 +105,7 @@
 				<textarea data-template>
 				## Magrit - ses points forts
 
-				<small>
+				<div class="light-small">
 
 				- **Simplicité d'utilisation** (application Web sans installation nécessaire, préparation d'une carte en 2 minutes)
 
@@ -101,24 +119,15 @@
 
 				- Sauvegarde d'un fichier projet permettant de reprendre le travail ultérieurement
 
-				</small>
-				--
-
-				<h3 style="display: none;">Exemples de cartes</h3>
-				<img src="images/carte-typo-eu.png" style="width: 400px; float: left;">
-
-				<img src="images/carte-co2.png" style="width: 550px; float: right;">
-
-				<img src="images/carte-cinema-pot.png" style="width: 400px; float: left;">
-
+				</div>
 
 				--
 
 				## Magrit - ses limites
 
-				<small>
+				<div class="light-small">
 
-				- Pas un SIG (pas de géotraitements)
+				- Pas un SIG (pas de géotraitements - pas ou de modifications des données)
 
 				- Pas d'analyses statistiques multivariées (régression, etc.)
 
@@ -126,7 +135,7 @@
 
 				- Nécessité d'utiliser de l'information géographique (données spatialisées) → Pas d'utilisation de fond de carte .svg / .ai
 
-				</small>
+				</div>
 				</textarea>
 			</section>
 
@@ -134,12 +143,41 @@
 				<textarea data-template>
 				## Démo
 
-				**Données** :
+				<p class="ta-left"><b>Données</b></p>
 
-				- Découpage des quartiers de Paris
+				- [Découpage des quartiers de Paris (GeoJSON)](data/demo/quartier_paris.geojson)
 
-				- Données de Population
+				- [Données de Population (CSV)](data/demo/quartier_paris_pop.csv)
 
+				<br>
+
+				<p class="ta-left"><b>Objectif</b></p>
+
+				- Importer et joindre les données
+
+				- Calculer un nouveau champ
+
+				- Combiner plusieurs représentations
+
+				- Exporter la carte
+
+				<aside class="notes">
+					📝
+					<ul>
+					<li>Ajout geojson</li>
+					<li>Choix Lambert 93</li>
+					<li>Ajout CSV données + jointures</li>
+					<li>Représentation Symbols proportionnels sur champ population 2012</li>
+					<li>Calcul champ densité_pop_2012</li>
+					<li>Représentation choroplèthe sur densité pop 2012</li>
+					<li>Modification de la légende pour layout horizontal</li>
+					<li>Représentation anamorphose, puis la cacher</li>
+					<li>Ajout d'éléments d'habillage : échelle et nord</li>
+					<li>Ajout d'un titre</li>
+					<li>Export en SVG</li>
+					<li>Montrer export en geojson du résultat de l'anamorphose ?</li>
+					</ul>
+				</aside>
 				</textarea>
 			</section>
 			<section data-markdown>
@@ -153,13 +191,33 @@
 				--
 
 				<img src="images/carte_uefa.png" style="width: 690px">
+
+				--
+
+				<div class="ta-left"><p><b>Source de données pour les fonds de carte à l'échelle du globe</b> :</p>
+
+				
+				- http://naturalearthdata.com/ (trouver le bon fond de carte : niveau de détails, présence des 50 pays concernés par le jeu de données, etc.)
+				
+				<br><br><img src="images/screenshot-wikipedia_uefa.png" style="float: right; width: 320px;"/>
+				
+
+				<p><b>Données des victoires par pays</b> :</p>
+
+				- [data_uefa.csv](data/ex1/data_uefa.csv) 
+
+				<div style="width: 50%;"><small>Source: <a href="https://fr.wikipedia.org/wiki/Ligue_des_champions_de_l%27UEFA">Wikipedia - Ligue des champions de l'UEFA</a></small></div>
+
+				</div>
+
+
 				</textarea>
 			</section>
 			<section data-markdown>
 				<textarea data-template>
 				## Exercice 2
 
-				<small>
+				<div class="light-small">
 
 				- **Objectif thématique** : Faire une carte de l'évolution 1968-2019 de la population de France Métropolitaine
 
@@ -172,13 +230,13 @@
 					- Données de population par département (source: INSEE) - https://www.insee.fr/fr/statistiques/1893204
 
 				
-				</small>
+				</div>
 				
 				--
 
 				### Étapes à suivre
 
-				<small>
+				<div class="light-small">
 
 				- **Étape 1** : Calculer la variable à représenter à partir du tableur de l'INSEE et exporter la table en CSV
 
@@ -188,7 +246,7 @@
 
 				- **Étape 4** : Faire les bons choix de sémiologie et d'habillage jusqu'à l'obtention d'une carte finalisée
 
-				</small>
+				</div>
 
 				</textarea>
 			</section>
@@ -196,7 +254,7 @@
 				<textarea data-template>
 				## Exercice 3
 
-				<small>
+				<div class="light-small">
 
 				- **Objectif thématique** : Analyser la structure de l'emploi dans la région Hauts-de-France en 2014.
 
@@ -210,12 +268,12 @@
 
 					- Structure de la population active de 25 à 54 ans par commune (source : INSEE)
 
-				*NB : les données ont été mises en forme avec R pour être importées dans Magrit (extrait des communes des Hauts-de-France et calcul des ratios et de la catégorie dominante)*
+				<small><i>NB : les données ont été mises en forme avec R pour être importées dans Magrit (extrait des communes des Hauts-de-France et calcul des ratios et de la catégorie dominante)</i></small>
 
-				</small>
+				</div>
 				--
 
-				<small>
+				<div class="light-small">
 				
 				### Étapes à suivre
 
@@ -225,7 +283,7 @@
 
 				- **Étape 3** : 
 
-				</small>
+				</div>
 
 				--
 
