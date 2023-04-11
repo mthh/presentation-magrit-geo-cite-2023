@@ -262,11 +262,11 @@
 
 				- **Données** :
 
-					- Fond de carte des communes de la région Hauts-de-France (source : IGN)
+					- [Fond de carte des communes de la région Hauts-de-France](data/ex3/Communes_Region.zip) (source : IGN)
 
-					- Fond de carte des départements de la région Hauts-de-France (source : IGN)
+					- [Fond de carte des départements de la région Hauts-de-France](data/ex3/departements.zip) (source : IGN)
 
-					- Structure de la population active de 25 à 54 ans par commune (source : INSEE)
+					- [Structure de la population active de 25 à 54 ans par commune](data/ex3/) (source : INSEE)
 
 				<small><i>NB : les données ont été mises en forme avec R pour être importées dans Magrit (extrait des communes des Hauts-de-France et calcul des ratios et de la catégorie dominante)</i></small>
 
@@ -277,11 +277,13 @@
 				
 				### Étapes à suivre
 
-				- **Étape 1** : Importer les données dans Magrit
+				- **Étape 1** : Importer toutes les données dans Magrit et réaliser la jointure
 
-				- **Étape 2** :
+				- **Étape 2** : Choisir la ou les représentations appropriées
 
-				- **Étape 3** : 
+				- **Étape 3** : Habiller la carte _(choix d'un titre, modification des légendes, ajout de labels, ajout du nom de l'auteur et des sources, d'un logo, etc.)_
+
+				- **Étape 4** : Exporter la carte _(SVG ou PNG)_
 
 				</div>
 
@@ -308,6 +310,16 @@
 
 				### Ajouter une ombre à une couche
 
+				<img src="images/fr-dep1.png" style="display: inline-block;width:39%;">
+			
+				<img src="images/fr-dep2.png" style="display: inline-block;width:39%;">
+
+				--
+
+				<img src="images/panneau-propriete-couche.png" style="display: inline-block;width:40%;">
+
+			
+				
 				--
 
 				### Aligner précisément les éléments d'habillage
@@ -426,9 +438,11 @@
 
 				- L'installer sur un *Raspberry Pi* pour enseigner la cartographie à une classe sans accès au Web ?
 
+				<div class="fragment">
 				<img src="images/Raspberry_Pi_4_Model_B_-_Side.jpg" style="width: 300px; float:left;">
 				<img src="images/docker-hub-magrit-multi.png" style="width: 600px; float:right;">
-
+				</div>
+				
 				--
 
 				### Installer Magrit avec Docker
